@@ -1,5 +1,4 @@
 package com.bridgelabz;
-
 /*
 * UC1:- Ability to create a Contacts in Address Book with first and last names,
 * address, city, state, zip, phone number and email...
@@ -17,6 +16,7 @@ package com.bridgelabz;
   Each Address Book has a unique Name - Use Console to add new Address Book - Maintain Dictionary of Address Book Name to
 *UC7:-Ability to ensure there is no Duplicate Entry of the same Person in a particular Address book.
 *UC8:-Ability to search Person in a City or State across the multiple AddressBook
+*UC9:-Ability to view Persons by City or State
   
 */
 import java.util.ArrayList;
@@ -24,6 +24,7 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class AddressBook {
 	static Scanner sc = new Scanner(System.in);
@@ -90,6 +91,16 @@ public class AddressBook {
 				System.out.println("Invalid Input");
 			}
 		}
+	}
+
+	/*
+	 * Create method ViewPersonByCityOrstate
+	 */
+	public void viewPersonByCityOrState() {
+		Map<String, Map<String, List<Person>>> people1 = adressBook.stream()
+				.collect(Collectors.groupingBy(Person::getCity, Collectors.groupingBy(Person::getState)));
+		System.out.println("After grouping by city is:-" + people1);
+
 	}
 
 	/*
