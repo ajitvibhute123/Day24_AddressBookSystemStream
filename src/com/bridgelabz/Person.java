@@ -1,5 +1,4 @@
 package com.bridgelabz;
-
 /*
  * create a Person Class and  details for the person
  */
