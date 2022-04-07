@@ -1,5 +1,8 @@
 package com.bridgelabz;
 
+/*
+* create a Person Class and  details for the person
+*/
 public class Person {
 	private String firstName;
 	private String lastName;
@@ -10,9 +13,6 @@ public class Person {
 	private long phoneNumber;
 	private String email;
 
-	/**
-	 * created method printContact for creating contacts in person.
-	 */
 	Person(String firstName, String lastName, String address, String city, String state, int zip, long phoneNumber,
 			String email) {
 		this.setFirstName(firstName);
@@ -107,6 +107,9 @@ public class Person {
 		// TODO Auto-generated constructor stub
 	}
 
+	/**
+	 * created method print to display the data
+	 */
 	@Override
 	public String toString() {
 		return "Person [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city=" + city
