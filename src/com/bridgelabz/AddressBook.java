@@ -17,7 +17,7 @@ package com.bridgelabz;
 *UC7:-Ability to ensure there is no Duplicate Entry of the same Person in a particular Address book.
 *UC8:-Ability to search Person in a City or State across the multiple AddressBook
 *UC9:-Ability to view Persons by City or State
-  
+*UC10:-Ability to get number of contact persons i.e.count by City or State
 */
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -91,6 +91,12 @@ public class AddressBook {
 				System.out.println("Invalid Input");
 			}
 		}
+	}
+
+	public void getCountOfCityAndState() {
+		Map<String, Map<String, Long>> people = adressBook.stream().collect(
+				Collectors.groupingBy(Person::getCity, Collectors.groupingBy(Person::getState, Collectors.counting())));
+		System.out.println("After counting by city and state is:-" + people);
 	}
 
 	/*
