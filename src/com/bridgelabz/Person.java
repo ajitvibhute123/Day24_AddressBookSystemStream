@@ -11,7 +11,7 @@ public class Person {
 	private String email;
 
 	/**
-	 * created method printContact for creating contacts in person
+	 * created method printContact for creating contacts in person.
 	 */
 	Person(String firstName, String lastName, String address, String city, String state, int zip, long phoneNumber,
 			String email) {
