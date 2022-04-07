@@ -20,11 +20,13 @@ package com.bridgelabz;
 *UC9:-Ability to view Persons by City or State
 *UC10:-Ability to get number of contact persons i.e.count by City or State
 *UC11:-Ability to sort the entries in the address book alphabetically by Person�s name
+*UC12:-Ability to sort the entries in the address book by City,
+       State, or Zip
 */
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.stream.Collectors;
-import java.util.HashMap;
+import java.util.HashMap; 
 import java.util.List;
 import java.util.Map;
 
